@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WeatherNow | Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="dashboard">
+    <header class="header">
+      <h1>☀ WeatherNow</h1>
+      <p>Your daily weather, beautifully presented.</p>
+    </header>
+
+    <section class="search-box">
+      <form id="weatherForm">
+        <input
+          type="text"
+          id="cityInput"
+          placeholder="Enter a city, e.g. Hyderabad"
+          aria-label="City name"
+          required
+        >
+        <button type="submit">Search</button>
+      </form>
+    </section>
+
+    <p id="message" role="status">Search for a city to see its weather.</p>
+
+    <section id="weatherCard" class="weather-card" hidden>
+      <p id="location"></p>
+      <div id="weatherIcon" class="weather-icon">🌤️</div>
+      <h2 id="temperature">--°C</h2>
+      <p id="description">Current conditions</p>
+
+      <div class="metrics">
+        <article class="metric">
+          <span>💧</span>
+          <p>Humidity</p>
+          <h3 id="humidity">--%</h3>
+        </article>
+        <article class="metric">
+          <span>💨</span>
+          <p>Wind Speed</p>
+          <h3 id="wind">-- km/h</h3>
+        </article>
+      </div>
+      <p id="updated"></p>
+    </section>
+
+    <footer>Powered by Open-Meteo Weather API</footer>
+  </main>
+</body>
+</html>
